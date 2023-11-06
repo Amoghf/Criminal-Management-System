@@ -78,9 +78,9 @@ class Criminal:
         self.photo_logo=ImageTk.PhotoImage(img_logo)
         
         self.logo=Label(self.root,image=self.photo_logo)
-        self.logo.place(x=80,y=5,width=60,height=60)
+        self.logo.place(x=80,y=5,width=59,height=60)
         
-        
+        # this is  a wow
         #images frame
         
         img_frame=Frame(self.root,bd=2,relief=RIDGE,bg='white')
