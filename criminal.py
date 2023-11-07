@@ -4,17 +4,6 @@ from PIL import Image, ImageTk
 
 import mysql.connector
 from tkinter import messagebox
-
-
-class Database:
-    def __init__(self):
-        self.conn = mysql.connector.connect(
-            host='localhost',
-            user='your_username',
-            password='your_password',
-            database='CriminalManagementSystem'  # Modify the database name
-        )
-        self.cursor = self.conn.cursor()
 class Login:
     def __init__(self, root):
         self.root = root
@@ -43,8 +32,18 @@ class Login:
         btn_login = Button(frame, text='Login', command=self.login, font=('times new roman', 12, 'bold'), bg='blue', fg='white')
         btn_login.grid(row=3, columnspan=2, pady=10)
 
+    def login(self):
+        username = self.username.get()
+        password = self.password.get()
 
-
+        if (username == "root" or username == "leaf" or username == "branch") and password == "Amogh123":
+            # If the username and password are correct, open the Criminal Management System window
+            self.root.destroy()
+            root_cms = Tk()
+            obj = Criminal(root_cms)
+            root_cms.mainloop()
+        else:
+            messagebox.showerror("Login Error", "Invalid username or password")
 class Criminal:
     def __init__(self,root):
         self.root=root #root=window
@@ -87,21 +86,21 @@ class Criminal:
         img_frame.place(x=0,y=70,width=1530,height=150)
         
         #images in frame
-        img1 = Image.open('images/1.jpg')
+        img1 = Image.open('images/11.jpg')
         img1 = img1.resize((540, 160), Image.LANCZOS)
         self.photo1 = ImageTk.PhotoImage(img1)
 
         self.img_1 = Label(img_frame, image=self.photo1)
         self.img_1.place(x=0, y=0, width=540, height=160)
 
-        img2 = Image.open('images/2.jpg')
+        img2 = Image.open('images/22.jpg')
         img2 = img2.resize((540, 160), Image.LANCZOS)
         self.photo2 = ImageTk.PhotoImage(img2)
 
         self.img_2 = Label(img_frame, image=self.photo2)
         self.img_2.place(x=540, y=0, width=540, height=160)  # Adjust the x position
 
-        img3 = Image.open('images/3.jpg')
+        img3 = Image.open('images/33.jpg')
         img3 = img3.resize((540, 160), Image.LANCZOS)
         self.photo3 = ImageTk.PhotoImage(img3)
 
@@ -218,7 +217,7 @@ class Criminal:
         
         #image in upper frame image:background roght side image
         
-        img4 = Image.open('images/4.jpg')
+        img4 = Image.open('images/44.jpg')
         img4 = img4.resize((470, 245), Image.LANCZOS)
         self.photo4 = ImageTk.PhotoImage(img4)
 
@@ -543,14 +542,9 @@ class Criminal:
     
                   
         
-if __name__=="__main__":
-    
-    #for the window part
-    root=Tk()
-    obj=Criminal(root)
+if __name__ == "__main__":
+    root = Tk()
+    obj = Login(root)
     root.mainloop()
-    
-    
-    
     
         
