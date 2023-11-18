@@ -13,23 +13,23 @@ class Login:
         self.username = StringVar()
         self.password = StringVar()
 
-        frame = Frame(self.root, bg='white')
+        frame = Frame(self.root, bg='gold')
         frame.place(x=150, y=100, width=300, height=200)
 
-        title = Label(frame, text='Welcome to CMS', font=('times new roman', 20, 'bold'), bg='white', fg='blue')
+        title = Label(frame, text='Welcome to Admin Page', font=('times new roman', 20, 'bold'), bg='gold', fg='blue')
         title.grid(row=0, columnspan=2, pady=20)
 
-        lbl_user = Label(frame, text='Username:', font=('times new roman', 12, 'bold'), bg='white')
-        lbl_user.grid(row=1, column=0, pady=10)
-        txt_user = Entry(frame, textvariable=self.username, font=('times new roman', 12))
+        lbl_user = Label(frame, text='Warden_Username:', font=('times new roman', 12, 'bold'), bg='gold')
+        lbl_user.grid(row=1, column=0, pady=5)
+        txt_user = Entry(frame, textvariable=self.username, font=('times new roman', 10))
         txt_user.grid(row=1, column=1)
 
-        lbl_pass = Label(frame, text='Password:', font=('times new roman', 12, 'bold'), bg='white')
-        lbl_pass.grid(row=2, column=0, pady=10)
-        txt_pass = Entry(frame, textvariable=self.password, font=('times new roman', 12), show='*')
+        lbl_pass = Label(frame, text='Warden_Password:', font=('times new roman', 12, 'bold'), bg='gold')
+        lbl_pass.grid(row=2, column=0, pady=5)
+        txt_pass = Entry(frame, textvariable=self.password, font=('times new roman', 10), show='*')
         txt_pass.grid(row=2, column=1)
 
-        btn_login = Button(frame, text='Login', command=self.login, font=('times new roman', 12, 'bold'), bg='blue', fg='white')
+        btn_login = Button(frame, text='Login', command=self.login, font=('times new roman', 12, 'bold'), bg='green', fg='white')
         btn_login.grid(row=3, columnspan=2, pady=10)
 
     def login(self):
@@ -109,17 +109,17 @@ class Criminal:
 
         
         #main frame 
-        Main_frame=Frame(self.root,bd=2,relief=RIDGE,bg='white')
+        Main_frame=Frame(self.root,bd=2,relief=RIDGE,bg='black')
         Main_frame.place(x=0,y=220,width=1500,height=560)
         
         #insidde main frame another frame
-        Upper_frame=LabelFrame(Main_frame,bd=2,relief=RIDGE,text='CRIMINAL INFORMATION',font=('times new roman',11,'bold'),fg='red',bg='white')
+        Upper_frame=LabelFrame(Main_frame,bd=2,relief=RIDGE,text='CRIMINAL INFORMATION',font=('times new roman',15,'bold'),fg='blue',bg='gold')
         Upper_frame.place(x=10,y=10,width=1480,height=270)
         
         #labels Entry
         
         #case id
-        caseid = Label(Upper_frame, text='Case ID:', font=('arial', 11, 'bold'), bg='white')
+        caseid = Label(Upper_frame, text='Case ID:', font=('arial', 11, 'bold'), bg='gold')
         caseid.grid(row=0, column=0, padx=2, pady=2, sticky='w')
 
         
@@ -128,7 +128,7 @@ class Criminal:
         
         
       # Criminal Number Label
-        lbl_criminal_no = Label(Upper_frame, text='CRIMINAL NUMBER:', font=('arial', 11, 'bold'), background='white')
+        lbl_criminal_no = Label(Upper_frame, text='CRIMINAL NUMBER:', font=('arial', 11, 'bold'), background='gold')
         lbl_criminal_no.grid(row=0, column=2, padx=2, sticky=W, pady=7)
 
       # Criminal Number Entry
@@ -137,7 +137,7 @@ class Criminal:
 
 
        #Criminal Name:
-        lbl_Name = Label(Upper_frame, text='CRIMINAL Name:', font=('arial', 11, 'bold'), background='white')
+        lbl_Name = Label(Upper_frame, text='CRIMINAL Name:', font=('arial', 11, 'bold'), background='gold')
         lbl_Name.grid(row=1, column=0, padx=2, sticky=W, pady=7)
         
         txt_Name = ttk.Entry(Upper_frame,textvariable=self.var_name, width=22, font=('arial', 11, 'bold'))
@@ -145,56 +145,56 @@ class Criminal:
     
     
         #criminal Nickname:
-        lbl_Nickname = Label(Upper_frame, text='Nickname:', font=('arial', 11, 'bold'), background='white')
+        lbl_Nickname = Label(Upper_frame, text='Nickname:', font=('arial', 11, 'bold'), background='gold')
         lbl_Nickname.grid(row=1, column=2, padx=2, sticky=W, pady=7)
         
         txt_Nickname = ttk.Entry(Upper_frame, textvariable=self.var_nickname,width=22, font=('arial', 11, 'bold'))
         txt_Nickname.grid(row=1, column=3, padx=2, sticky='w',pady=7)
         
         #Arrest DATE
-        lbl_arrestdate= Label(Upper_frame, text='Arrest date:', font=('arial', 11, 'bold'), background='white')
+        lbl_arrestdate= Label(Upper_frame, text='Arrest date:', font=('arial', 11, 'bold'), background='gold')
         lbl_arrestdate.grid(row=2, column=0, padx=2, sticky=W, pady=7)
         
         txt_arrestdate = ttk.Entry(Upper_frame, textvariable=self.var_arrest_date,width=22, font=('arial', 11, 'bold'))
         txt_arrestdate.grid(row=2, column=1, padx=2, sticky='w',pady=7)
         
         #date of crime:
-        lbl_doc= Label(Upper_frame, text='Date of Cirme:', font=('arial', 11, 'bold'), background='white')
+        lbl_doc= Label(Upper_frame, text='Date of Cirme:', font=('arial', 11, 'bold'), background='gold')
         lbl_doc.grid(row=2, column=2, padx=2, sticky=W, pady=7)
         
         txt_doc= ttk.Entry(Upper_frame,textvariable=self.var_date_of_crime, width=22, font=('arial', 11, 'bold'))
         txt_doc.grid(row=2, column=3, padx=2, sticky='w',pady=7)
         
         #address:
-        lbl_address= Label(Upper_frame, text='Address:', font=('arial', 11, 'bold'), background='white')
+        lbl_address= Label(Upper_frame, text='Address:', font=('arial', 11, 'bold'), background='gold')
         lbl_address.grid(row=3, column=0, padx=2, sticky=W, pady=7)
         
         txt_address= ttk.Entry(Upper_frame, textvariable=self.var_address,width=22, font=('arial', 11, 'bold'))
         txt_address.grid(row=3, column=1, padx=2, sticky='w',pady=7)
         
         #Age:
-        lbl_age= Label(Upper_frame, text='AGE:', font=('arial', 11, 'bold'), background='white')
+        lbl_age= Label(Upper_frame, text='AGE:', font=('arial', 11, 'bold'), background='gold')
         lbl_age.grid(row=3, column=2, padx=2, sticky=W, pady=7)
         
         txt_age= ttk.Entry(Upper_frame,textvariable=self.var_age, width=22, font=('arial', 11, 'bold'))
         txt_age.grid(row=3, column=3, padx=2, sticky='w',pady=7)
         
         #occupation
-        lbl_ocu= Label(Upper_frame, text='Occupation:', font=('arial', 11, 'bold'), background='white')
+        lbl_ocu= Label(Upper_frame, text='Occupation:', font=('arial', 11, 'bold'), background='gold')
         lbl_ocu.grid(row=4, column=0, padx=2, sticky=W, pady=7)
         
         txt_ocu= ttk.Entry(Upper_frame,textvariable=self.var_occupation, width=22, font=('arial', 11, 'bold'))
         txt_ocu.grid(row=4, column=1, padx=2, sticky='w',pady=7)
         
         #Birthmark
-        lbl_bm= Label(Upper_frame, text='BirthMark:', font=('arial', 11, 'bold'), background='white')
+        lbl_bm= Label(Upper_frame, text='BirthMark:', font=('arial', 11, 'bold'), background='gold')
         lbl_bm.grid(row=4, column=2, padx=2, sticky=W, pady=7)
         
         txt_bm= ttk.Entry(Upper_frame, textvariable=self.var_birthmark,width=22, font=('arial', 11, 'bold'))
         txt_bm.grid(row=4, column=3, padx=2, sticky='w',pady=7)
         
         #crime type
-        lbl_ct= Label(Upper_frame, text='CrimeType:', font=('arial', 11, 'bold'), background='white')
+        lbl_ct= Label(Upper_frame, text='CrimeType:', font=('arial', 11, 'bold'), background='gold')
         lbl_ct.grid(row=0, column=4, padx=2, sticky=W, pady=7)
         
         txt_ct= ttk.Entry(Upper_frame,textvariable=self.var_crime_type, width=22, font=('arial', 11, 'bold'))
@@ -202,7 +202,7 @@ class Criminal:
         
         
         #father NAME:
-        lbl_fathername= Label(Upper_frame, text='FatherName:', font=('arial', 11, 'bold'), background='white')
+        lbl_fathername= Label(Upper_frame, text='FatherName:', font=('arial', 11, 'bold'), background='gold')
         lbl_fathername.grid(row=1, column=4, padx=2, sticky=W, pady=7)
         
         txt_fathername= ttk.Entry(Upper_frame,textvariable=self.var_father_name, width=22, font=('arial', 11, 'bold'))
@@ -211,7 +211,7 @@ class Criminal:
        
         
         #most wanted:
-        lbl_wanted= Label(Upper_frame, text='Most Wanted:', font=('arial', 11, 'bold'), background='white')
+        lbl_wanted= Label(Upper_frame, text='Most Wanted:', font=('arial', 11, 'bold'), background='gold')
         lbl_wanted.grid(row=3, column=4, padx=2, sticky=W, pady=7)
         
         
@@ -227,10 +227,10 @@ class Criminal:
         
         # gender radio frame
         radio_frame_gender = Frame(Upper_frame, bd=2, relief='ridge', bg='white')
-        radio_frame_gender.place(x=750, y=85, width=190, height=40)
+        radio_frame_gender.place(x=770, y=85, width=190, height=40)
         
          #gender:
-        lbl_gender= Label(Upper_frame, text='Gender:', font=('arial', 11, 'bold'), background='white')
+        lbl_gender= Label(Upper_frame, text='Gender:', font=('arial', 11, 'bold'), background='gold')
         lbl_gender.grid(row=2, column=4, padx=2, sticky=W, pady=7)
         
         male=Radiobutton(radio_frame_gender,variable=self.var_gender,text='Male',value='male',font=('arial',12,'bold'),bg='white')
@@ -243,7 +243,7 @@ class Criminal:
 
         # most wanted radio frame
         radio_frame_wanted = Frame(Upper_frame, bd=2, relief='ridge', bg='white')
-        radio_frame_wanted.place(x=760, y=130, width=190, height=40)
+        radio_frame_wanted.place(x=770, y=130, width=190, height=40)
         
         Yes=Radiobutton(radio_frame_wanted,variable=self.var_wanted,text='Yes',value='Yes',font=('arial',12,'bold'),bg='white')
         Yes.grid(row=0,column=0,pady=2,padx=5,sticky=W)
@@ -254,25 +254,25 @@ class Criminal:
         No.grid(row=0,column=1,pady=2,padx=5,sticky=W)
 
         #buttons
-        button_frame=Frame(Upper_frame,bd=2,relief=RIDGE,bg='white')
+        button_frame=Frame(Upper_frame,bd=2,relief=RIDGE,bg='black')
         button_frame.place(x=5,y=200,width=620,height=45)
         
         #add button
-        btn_add=Button(button_frame,command=self.add_data,text='Record Save',font=("arial",13,"bold"),width=14,bg='blue',fg='white')
+        btn_add=Button(button_frame,command=self.add_data,text='Record Save',font=("arial",13,"bold"),width=14,bg='green',fg='white')
         btn_add.grid(row=0,column=0,padx=3,pady=5)
         
         #update button
-        btn_update=Button(button_frame,command=self.update_data,text='Update',font=("arial",13,"bold"),width=14,bg='blue',fg='white')
+        btn_update=Button(button_frame,command=self.update_data,text='Update',font=("arial",13,"bold"),width=14,bg='green',fg='white')
         btn_update.grid(row=0,column=1,padx=3,pady=5)
         
         
         #delete button
-        btn_delete=Button(button_frame,command=self.delete_data,text='Delete',font=("arial",13,"bold"),width=14,bg='blue',fg='white')
+        btn_delete=Button(button_frame,command=self.delete_data,text='Delete',font=("arial",13,"bold"),width=14,bg='green',fg='white')
         btn_delete.grid(row=0,column=2,padx=3,pady=5)
         
         
         #clear button 
-        btn_clear=Button(button_frame,command=self.clear_data,text='Clear',font=("arial",13,"bold"),width=14,bg='blue',fg='white')
+        btn_clear=Button(button_frame,command=self.clear_data,text='Clear',font=("arial",13,"bold"),width=14,bg='green',fg='white')
         btn_clear.grid(row=0,column=3,padx=3,pady=5)
         
         
@@ -287,12 +287,12 @@ class Criminal:
         
         #down frame
         
-        down_frame=LabelFrame(Main_frame,bd=2,relief=RIDGE,text='CRIMINAL INFORMATION TABLE',font=('times new roman',11,'bold'),fg='red',bg='white')
+        down_frame=LabelFrame(Main_frame,bd=2,relief=RIDGE,text='CRIMINAL INFORMATION TABLE',font=('times new roman',13,'bold'),fg='blue',bg='gold')
         down_frame.place(x=10,y=280,width=1480,height=270)
         
         #inside downframe new frame
         
-        search_frame=LabelFrame(down_frame,bd=2,relief=RIDGE,text=' SEARCH CRIMINAL RECORD',font=('times new roman',11,'bold'),fg='red',bg='white')
+        search_frame=LabelFrame(down_frame,bd=2,relief=RIDGE,text=' SEARCH CRIMINAL RECORD',font=('times new roman',13,'bold'),fg='blue',bg='gold')
         search_frame.place(x=10,y=0,width=1470,height=60)
         
         lbl_search_by = Label(search_frame, text='Search By:', font=('arial', 11, 'bold'), background='red', fg='white')
@@ -317,7 +317,7 @@ class Criminal:
         btn_all = Button(search_frame, command=self.fetch_data,text='Show All', font=("arial", 13, 'bold'), width=14, bg='blue', fg='white')
         btn_all.grid(row=0, column=4, padx=3, pady=5)
 
-        crimeagency = Label(search_frame, text='National Cirme Agency', font=('arial', 30, 'bold'), background='white', fg='crimson')
+        crimeagency = Label(search_frame, text='National Crime Agency', font=('arial', 30, 'bold'), background='gold', fg='blue')
         crimeagency.grid(row=0, column=5, padx=50, sticky='w',pady=0)
 
         
